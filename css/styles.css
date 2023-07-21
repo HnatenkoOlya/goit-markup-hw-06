@@ -31,6 +31,34 @@ a {
     max-width: 100%;
     height: auto;
   }
+/*.container {
+    width: 1158px;
+    padding: 0 15px;
+    margin: 0 auto;
+    flex-wrap: wrap;
+  }*/
+  /*Container for mobile*/
+.container {
+    min-width: 320px;
+    max-width: 428px;
+    margin-left: auto;
+    margin-right: auto;
+}
+/*Container for tablet*/
+@media screen and (min-width:768px){
+    .container{
+        max-width: 768px;
+        padding-left: 16px;
+        padding-right: 16px;
+    }
+}
+/*Container for desktop*/
+@media screen and (min-width:1158px){
+    .container{
+        max-width: 1158px;
+        padding: 0 15px;
+    }
+}
 /*Header styles*/
 .link-logo {
     font-family: "Raleway", sans-serif;
@@ -97,12 +125,6 @@ a {
     border-radius: 2px;
     color: #404bbf;  
 }
-.container {
-    width: 1158px;
-    padding: 0 15px;
-    margin: 0 auto;
-    flex-wrap: wrap;
-  }
 .header-container {
     display: flex;
     align-items: center;
@@ -200,8 +222,28 @@ a {
     background-color:  #404BBF;
 }
 /*Feature*/
-.feature {
+/*.feature {
     padding: 120px 0;
+}*/
+/*Feature for mobile*/
+.features {
+    max-width: 396px;
+    padding: 96px 0;
+    margin-left: auto;
+    margin-right: auto;
+}
+/*Feature for tablet*/
+@media only screen and (min-width:768px) {
+  .features-section{
+    max-width: 736px;
+    }
+}    
+/*Feature for desktop*/
+    @media only screen and (min-width: 1158px) {
+  .features-section{
+    max-width: 1158px;
+    padding: 120px 0;
+    }
 }
 .visually-hidden {
         position: absolute;
@@ -215,7 +257,7 @@ a {
         clip: rect(0 0 0 0);
         overflow: hidden;
 }
-.feature-div{
+/*.feature-div{
     display: flex;
     align-items: center; 
     justify-content: center; 
@@ -226,14 +268,14 @@ a {
     width: 264px;
     height: 112px;
     padding: 24px 0;
-}
-.feature-p {
+}*/
+/*.feature-p {
     list-style: none;
     display: flex;
     gap: 24px;
     text-align: center; 
-}
-.strategy {
+}*/
+/*.strategy {
     font-weight: 500;
     font-size: 20px;
     line-height: 1.2;
@@ -241,15 +283,43 @@ a {
     color: var(--link-color);
     text-align: center;
     margin-bottom: 8px;
+}*/
+/*Strategy for mobile*/
+.strategy { 
+    font-family: Roboto;
+    color: var(--link-color);
+    text-align: center;
+    font-size: 20px;
+    font-weight: 500;
+    line-height: 1.2;
+    letter-spacing: 0.02em;
 }
 .feature-li {
+    padding-bottom: 72px;
+}
+.feature-li:first-child {
+    padding-top: 96px;
+}
+/*Strategy for tablet*/
+@media only screen and (min-width:768px) {
+  .strategy{
+    max-width: 356px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    list-style: none;
+    gap: 24px;
+    text-align: center; 
+      }
+  }    
+/*.feature-li {
     display: flex;
     width: 264px;
     flex-direction: column;
     align-items: flex-start;
     gap: 8px;
     width: calc((100% - 72px) / 4);
-}
+}*/
 .strategy-p {
     font-size: 16px;
     line-height: 1.5;
