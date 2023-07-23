@@ -183,7 +183,6 @@ a {
     list-style: none;
     color: #404bbf;
     margin-right: auto;
-    padding: 24px 0;
     transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 @media only screen and (min-width: 320px) {
@@ -235,7 +234,6 @@ a {
 .header-list {
     display: flex;
     gap: 40px;
-    padding-top: 24px;
 }
 .header-item {
     margin-right: 40px;
@@ -280,38 +278,6 @@ a {
     display: flex;
     margin: 0 auto;
 } 
-@media (min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
-    .hero {
-        background-image: linear-gradient(var(--primary-dark-color), var(--primary-dark-color)),
-            url(../images/mob_@1x.jpg);
-    }
-}
-@media only screen and (min-width: 320px) {
-    .hero {
-        background-image: linear-gradient(var(--primary-dark-color), var(--primary-dark-color)),
-                url(../images/tab_1x.jpg);
-    }
-    @media (min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
-        .hero {
-            background-image: linear-gradient(var(--primary-dark-color), var(--primary-dark-color)),
-                    url(../images/tab_@2x.jpg);
-        }
-    }
-}    
-@media only screen and (min-width: 769px) {
-    .hero {
-        background-image: linear-gradient(var(--primary-dark-color), var(--primary-dark-color)),
-                url(../images/img13.jpg);
-    }
-        @media (min-device-pixel-ratio: 2),
-        (min-resolution: 192dpi),
-        (min-resolution: 2dppx) {
-            .hero {
-                background-image: linear-gradient(var(--primary-dark-color), var(--primary-dark-color)),
-                    url(../images/img13.jpg);
-            }
-        }
-}
 @media screen and (min-width:1158px) { 
 .hero-h {
     font-size: 56px;
@@ -567,6 +533,7 @@ a {
 @media only screen and (min-width: 1158px) {
     .section-team {
         padding: 120px 0;
+        max-width: 1158px;
     }
 }
 .section-team-title {
@@ -613,25 +580,20 @@ a {
         border-radius: 0px 0px 4px 4px;
         background: var(--brand-color);
         box-shadow:0px 1px 6px rgba(46, 47, 66, 0.08), 0px 1px 1px rgba(46, 47, 66, 0.16), 0px 2px 1px rgba(46, 47, 66, 0.08);
+    }
+    @media screen and (min-width: 768px) and (max-width: 1158px)  {
+    .section-team-div {
+        width: 584px;
+    }
 }
 @media only screen and (min-width: 768px) {
     .section-team-item {
-        width: calc((100% - 32px) / 2);
+        flex-basis: calc((100% - 58px) / 2);
     }
 }
 @media only screen and (min-width: 1158px) { 
 .section-team-item {
-    background-color: #FFFFFF;
-    display: inline-flex;
-    padding: 0px 0px 32px 0px;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    gap: 32px;
-    border-radius: 0px 0px 4px 4px;
-    background: var(--brand-color);
-    box-shadow:0px 1px 6px rgba(46, 47, 66, 0.08), 0px 1px 1px rgba(46, 47, 66, 0.16), 0px 2px 1px rgba(46, 47, 66, 0.08);
-    width: calc((100% - 72px) / 4);
+    width: calc((100% - 58px) / 4);
 }
 }
 .hpd-p {
@@ -644,6 +606,11 @@ a {
 .customers {
     padding-top: 120px; 
     padding-bottom: 120px;
+}
+@media screen and (min-width: 768px) and (max-width: 1157px) {
+    .customers-div {
+        max-width: 584px;
+    }
 }
 @media only screen and (min-width: 320px) {
     .customers {
@@ -669,7 +636,6 @@ a {
     text-align: center;
     letter-spacing: 0.02em;
 }
-@media only screen and (min-width: 320px) {
     .customers-ul {
         display: flex;
         flex-wrap: wrap;
@@ -678,10 +644,14 @@ a {
         column-gap: 16px;
         margin: 0 auto;
     }
-}
+    @media only screen and (min-width: 320px) {
+        .customers-ul {
+            gap: 72px 24px;
+        }
+    }
 @media only screen and (min-width: 320px) {
     .customers-ul-li {
-        width: calc((100% - 16px) / 2);
+        width: calc((100% - 48px) / 2);
     }
 }
 @media only screen and (min-width: 768px) {
@@ -751,23 +721,22 @@ a {
 @media only screen and (min-width: 320px) {
     .footer-div {
         display: flex;
-        flex-wrap: wrap;
         text-align: left;
         padding-left: 80px;
+        justify-content: center;
     }
 }
 @media only screen and (min-width: 768px) {
     .footer-div {
         display: flex;
         flex-wrap: wrap;
-        text-align: left;  
+        flex-direction: row;
+        gap: 72px 24px;
     }
 }
 @media only screen and (min-width: 1158px) {
     .footer-div {
         display: flex;
-        align-items: baseline;
-        margin-right: 120px;
         flex-wrap: nowrap;
     }
 }
@@ -807,7 +776,8 @@ a {
     display: flex; 
     gap: 16px;
     justify-content: center;
-    margin-bottom: 16px;
+    margin-right: 80px;
+    text-align: left;
 }
 @media only screen and (min-width: 320px) {
     .footer-soc {
@@ -863,6 +833,7 @@ a {
 @media only screen and (min-width: 320px) {
     .footer-form-d{
     text-align: center;
+    margin: 80px;
     }
 }
 @media only screen and (max-width: 768px) {
