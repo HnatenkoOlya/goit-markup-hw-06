@@ -532,6 +532,11 @@ a {
     font-weight: 500;
     line-height: 24px;
     letter-spacing: 0.32px;
+    line-height: 1.5;
+    letter-spacing: 0.02em;
+    color: var( --link-color-add);
+    text-align: center;
+    
     }
 } 
 @media only screen and (min-width:1158px) {
