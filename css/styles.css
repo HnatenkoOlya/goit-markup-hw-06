@@ -512,11 +512,6 @@ a {
         padding-bottom: 72px;
     }
 }
-@media only screen and (min-width:1158px) {
-    .strategy {
-        font-size: 20px;
-    }
-}
 @media only screen and (min-width:768px) {
     .strategy-team {
         font-weight: 500;
@@ -530,7 +525,7 @@ a {
     }
 }
 /*Strategy for tablet*/
-@media only screen and (min-width:768px) {
+/*@media only screen and (min-width:768px) {
   .strategy {
     display: flex;
     flex-direction: column;
@@ -561,7 +556,8 @@ a {
         overflow-x: hidden;
   
       }
-    }  
+    }*/
+
   @media only screen and (min-width: 320px) {
     .strategy-team {  
         font-weight: 500;
@@ -930,7 +926,6 @@ a {
     .footer-a-p {
         text-align: left;
         margin-right: 24px;
-        margin-bottom: 72px;
     }
 }
 @media only screen and (min-width: 1158px) {
@@ -1049,6 +1044,11 @@ a {
     flex-direction: column;
     align-items: center;
     gap: 16px;
+}
+@media screen and (min-width: 768px){
+.footer-form-d {
+    display: block;
+}
 }
 @media only screen and (max-width: 1157px) {
 .footer-form-d {
@@ -1344,7 +1344,6 @@ a {
 }
 form {
     padding: 0;
-    padding-top: 16px;
 }
 input {
     display: flex;
