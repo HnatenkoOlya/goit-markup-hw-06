@@ -39,11 +39,11 @@ a {
     flex-wrap: wrap;
     overflow-x: hidden;
   }
-  @media screen and (min-width: 428px) {
+/*  @media screen and (min-width: 428px) {
 .menu-container {
     max-width: 426px;
 }
-}
+}*/
 /*Container for mobile*/
 @media screen and (min-width:320px){
 .container {
